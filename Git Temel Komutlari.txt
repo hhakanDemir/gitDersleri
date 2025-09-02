@@ -1,0 +1,64 @@
+Temel Git komutlari
+
+git init => git i ilk defa bulunulan klasörde/projede oluşturmak için kullanılır.
+Git reposunu oluşturmamızı sağlar.
+
+**************************************************************
+
+git add dosyaAdı.uzantısı  =>  
+Bir dosya repoya gönderilmeden önce hazırlanma alanına gönderilemsi gerekir. Bu hazırlanöa
+alanına staging area denir. Bosluk bırakılarak birden fazla dosya tek komutla staging
+area ya gönderilebilir.
+
+git add . =>  yazıldıgında staging area ya atılmamış tüm dosyaları staging area ya atar.
+
+ git rm dosyaAdı.uzantısı --cached  => staging areadan istenilen dosyayı çıkartır.
+ git reset  => staring areadan dosya/dosyaları çıkartır.
+
+**************************************************************
+
+git status => komutu ile staging areaya yani hazırlık alanında bulunan ve bulunamayan dosyaları görebiliriz.
+Bu sayede istediğimiz dosyaları bu komut ile kontrol ederek staging area ya atabilir yada staging
+area da olan dosyaları commitleyebiliriz.
+
+**************************************************************
+
+
+git commit  => Staging area da bulunan dosyaları yerel repoya (local repository) yüklemek için kullanılır.
+
+git commit -m  => tagi ile commit e ait mesajınızı bwelirleyebilirsiniz.
+
+Yalnızca gir commit yazdığınızda varsayılan git template "i" klavyeden harfine basarak mesajınızı yazmanızı saglar.
+Commit ten cıkmak icin sırası ile 
+esc sonrasında : tuşlarına basılınca terminal satırında  wq! yazılır enter e basılarak cıkma saglanır.  
+
+Commit mesajları emir kipi ile olmalıdır. Yapılan gelistirme ile ilgili bilgi veren bir cümle kurulmalıdır.
+
+**************************************************************
+
+git branch  
+
+Genellikle projemizin ana dalı masterdir. Gectigimiz senelerde main olarak güncellendi. Bu 2 isimlede görebilirsiniz.
+
+git branch =>  hangi branch de olduğunuzu gösterir.
+
+git branch branchAdi  =>  Yeni bir branch olusturur.
+
+git checkout branchAdi  => branch değistirme.
+
+git branch -D branchAdi => branch silme.
+
+**************************************************************
+
+git remote add => Yerelde bulunan git repomuza uzak sunucuda bulunan repoyu ekleme işlemi
+
+git remote add orgin URL.git =>  Yerel repomuza orgin adlı bir uzak sunucu eklemiş olduk. Orgin ismi genelde yaygın 
+kullanıldıgı için bu sekilde isimlendiriyoruz. Farklı bir isimde verebiliriz.
+
+**************************************************************
+
+git push =>  Yerel repomuzda bulunan commitlerş uzak sunucuya göndermiş oluyoruz.
+
+git push origin brancAdi =>  burada da origin kullandık çünkü yukarıdaki komut ile bağlantıyı olustururken orgin ile 
+oluşturmuştuk. aynı şekilde devam ediyoruz.
+
