@@ -52,8 +52,12 @@ git branch -D branchAdi => branch silme.
 
 git remote add => Yerelde bulunan git repomuza uzak sunucuda bulunan repoyu ekleme işlemi
 
-git remote add orgin URL.git =>  Yerel repomuza orgin adlı bir uzak sunucu eklemiş olduk. Orgin ismi genelde yaygın 
+git remote add origin URL.git =>  Yerel repomuza origin adlı bir uzak sunucu eklemiş olduk. Orgin ismi genelde yaygın 
 kullanıldıgı için bu sekilde isimlendiriyoruz. Farklı bir isimde verebiliriz.
+
+git remote remove origin  =>  yerel repomuza eklediğinmiz sunucu adında hata yaptıysak kaldırmak için kukllanılır.
+
+bu komutlar 1 kereye mahsus. baglantı olusturduktan sonra birdaha kullanmıyoruz.
 
 **************************************************************
 
@@ -62,3 +66,37 @@ git push =>  Yerel repomuzda bulunan commitlerş uzak sunucuya göndermiş oluyo
 git push origin brancAdi =>  burada da origin kullandık çünkü yukarıdaki komut ile bağlantıyı olustururken orgin ile 
 oluşturmuştuk. aynı şekilde devam ediyoruz.
 
+**************************************************************
+
+git log  =>  yerel reponuzdaki commit geçmişinizi görebiliriz. Her commit in ayri bir id si vardır.
+
+git log --pretty=oneline  => commitlerin id lerini tek satırda göemek icin.
+
+**************************************************************
+
+git clone URL.git  => uzak repomuzdaki projemizi klonlamak yani çekmek için klullanılır.
+
+**************************************************************
+
+git pull origin brancAdi => uzak repomuzda bulunan değişiklikleri yerel sunucumuza birleştirerek çekmemize sağlar
+
+**************************************************************
+
+git marge brancAdi  =>  üzerinde olduğumuz branch ile belirttiğimiz branch i birleştirmek için kullanılır.
+
+**************************************************************
+
+Uzak repoya göndermediğimiz commitler için uygulaya biliriz.
+
+git reset --soft logID  =>  Belirtilen logID ye ait commiti ve sonraki commitleri silerek staging areada tutar.
+git reset --mixed logID =>  Belirtilen logID ye ait commiti ve sonraki commitleri silerek staging areadan çıkararak tutar.
+git reset --hard logID  =>  Belirtilen logID ye ait commiti ve sonraki commitleri siler.
+
+git reset --soft HEAD~1 => bir önceki commite dönmek için kullanılır.
+git reset --soft HEAD~2 => iki önceki commite dönmek için kullanılır.
+git reset --soft HEAD~5 => bes önceki commite dönmek için kullanılır.
+
+**************************************************************
+
+git revert logID  =>  commit ettiğimiz herhangibir değişikilği geri almak için kullanıyoruz.
+Çalışma mantığı ise 
