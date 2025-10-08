@@ -74,11 +74,11 @@ git log --pretty=oneline  => commitlerin id lerini tek satırda göemek icin.
 
 **************************************************************
 
-git clone URL.git  => uzak repomuzdaki projemizi klonlamak yani çekmek için klullanılır.
+git clone URL.git  => uzak repomuzdaki projemizi klonlamak yani çekmek için klullanılır. Bir projeyi ilk defa bilgisayara çekerken bu kod.
 
 **************************************************************
 
-git pull origin brancAdi => uzak repomuzda bulunan değişiklikleri yerel sunucumuza birleştirerek çekmemize sağlar
+git pull origin brancAdi => uzak repomuzda bulunan değişiklikleri yerel sunucumuza birleştirerek çekmemize sağlar. daha önce clone ile çekilmiş projelerdeki değişiklikleri çekmek için.
 
 **************************************************************
 
